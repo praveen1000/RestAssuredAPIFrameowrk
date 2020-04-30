@@ -1,5 +1,28 @@
+ Rest assured framework with cucumber:
+  
+   Jenkinsfile
+   ```
+   1. Tools: Name of the automatically installation of maven and jdk is given here.
+   2. Trigger: It will trigger the build at provided intervals. pollSCM('') can be replaced with desired 
+      build frequency example: pollSCM(* * * * *) 
+   3. Environemnt: It will create environment variables. I am reading maven project attributes.
+   4. Parameter: Never used in the project but can be created with the provided syntax.
+   5. Stages: 
+       1. Stage 1: Init: Print the project attributes.
+       2. Stage 2: Clean and compile 
+       3. Stage 3: Test and verify i .everify is used to generate cucumber report using plugin. 
+               post call will always(Fail, pass unable state) feed report to jenkins plaugin.
+   6. Post call: It will notify the git about the build status and put a red cross or green check 
+      next to the commit according to build status in jenkins. 
+   ```
 
-[![Build Status](http://localhost:8090/buildStatus/icon?job=RestAssured%2Fdev)](http://localhost:8090/job/RestAssured/job/dev/)
+   pom.xml
+   ```
+   1. Profiling is used to feed default value to property attribute <jenkins.buildNumber>, otherwise while running any 
+      maven command locally it will through NullPointerException.
+   2. testResources block is used to filter the test resources and assign value to them at runtime. Here current 
+      jenkins build number will be assigned to a variable in global.properties file in resources folder.
+   ```
    
    POJO classes to serialise and deserialize the request and response respectively.
    ````
@@ -17,8 +40,8 @@
    Step Definitions 
    ```
    BaseClass: 
-   1. Based on Singleton design pattern 
-   2. Contains getters and setters for the classes that are required for GIVEN, WHEN, THEN step definitions to work
+   1. Based on Singleton design pattern. 
+   2. Contains getters and setters for the classes that are required for GIVEN, WHEN, THEN step definitions to work.
    
    Hooks:
    1. Contains After, before and beforestep annotaions. 
@@ -32,3 +55,4 @@
    1. Using Maven-cucumber-plugin to generate report
    2. logging.txt file will generate at run-time that will contain request payload and response along with hedears.
    ```
+
