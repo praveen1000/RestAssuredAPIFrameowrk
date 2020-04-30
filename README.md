@@ -42,9 +42,9 @@
    ````
    Step Definitions 
    ```
-   BaseClass: 
-   1. Based on Singleton design pattern. 
-   2. Contains getters and setters for the classes that are required for GIVEN, WHEN, THEN step definitions to work.
+   TemporaryStore: 
+   1. Applies singleton design pattern, so no other class can extend it and iniialze it.
+   1. Stores requests and responses temporarily and can only be acessible using getters and setters.
    
    Hooks:
    1. Contains After, before and beforestep annotaions. 

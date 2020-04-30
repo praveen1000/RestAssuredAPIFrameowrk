@@ -13,6 +13,16 @@ public class TemporaryStore {
     private Response response;
     private static String place_id;
 
+    private static TemporaryStore obj;
+    private TemporaryStore() {}
+
+    public static TemporaryStore getInstance()
+    {
+        if (obj==null)
+            obj = new TemporaryStore();
+        return obj;
+    }
+
     public RequestSpecification getFullSpec() {
         return this.fullSpec;
     }
