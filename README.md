@@ -1,4 +1,4 @@
- Rest assured framework with cucumber:
+ RestAssured framework with cucumber:
   
    Jenkinsfile
    ```
@@ -11,9 +11,9 @@
        1. Stage 1: Init: Print the project attributes.
        2. Stage 2: Clean and compile 
        3. Stage 3: Test and verify i .everify is used to generate cucumber report using plugin. 
-               post call will always(Fail, pass unable state) feed report to jenkins plaugin.*
+               post call will always(Fail, pass unable state) feed report to jenkins plaugin.
    6. Post call: It will notify the git about the build status and put a red cross or green check 
-      next to the commit according to build status in jenkins.**
+      next to the commit according to build status in jenkins.
    ```
 
    pom.xml
@@ -58,6 +58,10 @@
 
 Images
 
+![](images/Jenkins.PNG)
+
 ![](images/cucumberReport.PNG)
 
 ![](images/git.PNG)
+
+
