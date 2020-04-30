@@ -1,0 +1,4 @@
+logging.txt
+*.iml
+.idea
+target/
