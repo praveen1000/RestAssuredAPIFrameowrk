@@ -4,11 +4,11 @@ Author -> Praveen Kumar
 
 package stepDefinitions;
 
-import helpers.HelpersInitializzation;
+import helpers.HelpersInitialization;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 
-public class Whens implements HelpersInitializzation {
+public class Whens implements HelpersInitialization {
 
     private Response response;
     BaseClass bc = BaseClass.getInstance();

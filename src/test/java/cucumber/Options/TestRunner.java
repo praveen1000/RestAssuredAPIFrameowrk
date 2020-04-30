@@ -4,12 +4,11 @@ Author -> Praveen Kumar
 
 package cucumber.Options;
 
-import helpers.HelpersInitializzation;
+import helpers.HelpersInitialization;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
-import stepDefinitions.BaseClass;
 
 import java.io.*;
 
@@ -20,7 +19,7 @@ import java.io.*;
         tags = {"@smoke or @regression"},
         plugin="json:target/jsonReports/cucumber-report.json",
         monochrome = true)
-public class TestRunner implements HelpersInitializzation {
+public class TestRunner implements HelpersInitialization {
 
     @BeforeClass
     public static void setUp() throws IOException {

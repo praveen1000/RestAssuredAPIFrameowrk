@@ -4,14 +4,14 @@ Author -> Praveen Kumar
 
 package stepDefinitions;
 
-import helpers.HelpersInitializzation;
+import helpers.HelpersInitialization;
 import io.cucumber.java.en.Given;
 import io.restassured.specification.RequestSpecification;
 import pojo.DeletePlace;
 import java.io.IOException;
 import static io.restassured.RestAssured.given;
 
-public class Givens implements HelpersInitializzation {
+public class Givens implements HelpersInitialization {
 
     private RequestSpecification givenRequestSpec;
     BaseClass bc = BaseClass.getInstance();

@@ -30,12 +30,15 @@
    Location.java
    DeletePlace.java
    ````
-   Resources
+   Helpers
    ````
-   APIResources: Enum class to supply http method specific resource
-   TestDataBuild: Build payload using POJO classes and consume data when called in definition.
-   Utils: Utility for all the resuable methods like resquestSpec, responseSpec, getResource, readProperties, JSONPath
-   global.properties: Contains project specific properties
+   1. APIResources: Enum class to supply http method specific resource
+   2. HelpersInitialization: Interface to initialize util and testdatabuild classes. Implement this interface wherever
+      required in step definitions.  
+   3. TestDataBuild: Build payload using POJO classes and consume data when called in definition.
+   4. Utils: Utility for all the resuable methods like resquestSpec, responseSpec, getResource, readProperties, JSONPath
+   5. global.properties: Contains project specific properties
+   
    ````
    Step Definitions 
    ```

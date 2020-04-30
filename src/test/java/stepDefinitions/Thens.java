@@ -4,14 +4,14 @@ Author -> Praveen Kumar
 
 package stepDefinitions;
 
-import helpers.HelpersInitializzation;
+import helpers.HelpersInitialization;
 import io.cucumber.java.en.Then;
 import io.restassured.specification.RequestSpecification;
 import java.io.IOException;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
-public class Thens implements HelpersInitializzation {
+public class Thens implements HelpersInitialization {
 
     private RequestSpecification thenRequestSpec;
     BaseClass bc = BaseClass.getInstance();
