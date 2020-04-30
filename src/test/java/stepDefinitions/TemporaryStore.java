@@ -6,24 +6,12 @@ package stepDefinitions;
 
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import helpers.TestDataBuild;
-import helpers.Utils;
 
-public class BaseClass {
+public class TemporaryStore {
 
     private RequestSpecification fullSpec;
     private Response response;
     private static String place_id;
-
-    private static BaseClass obj;
-    private BaseClass() {}
-
-    public static BaseClass getInstance()
-    {
-        if (obj==null)
-            obj = new BaseClass();
-        return obj;
-    }
 
     public RequestSpecification getFullSpec() {
         return this.fullSpec;
@@ -46,7 +34,7 @@ public class BaseClass {
     }
 
     public void setPlace_id(String place_id) {
-        BaseClass.place_id = place_id;
+        TemporaryStore.place_id = place_id;
     }
 
 
