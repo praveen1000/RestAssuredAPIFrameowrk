@@ -14,8 +14,6 @@ public class BaseClass {
     private RequestSpecification fullSpec;
     private Response response;
     private static String place_id;
-    private final Utils util = new Utils();
-    private final TestDataBuild data = new TestDataBuild();
 
     private static BaseClass obj;
     private BaseClass() {}
@@ -25,14 +23,6 @@ public class BaseClass {
         if (obj==null)
             obj = new BaseClass();
         return obj;
-    }
-
-    public TestDataBuild getData() {
-        return this.data;
-    }
-
-    public Utils getUtil() {
-        return this.util;
     }
 
     public RequestSpecification getFullSpec() {
