@@ -74,7 +74,7 @@ pipeline{
       }
       post{
             always{
-                archiveArtifacts artifacts: '**/*.jar', fingerprint: true
+                archiveArtifacts artifacts: '**/*.json', fingerprint: true
                 echo "${currentBuild.result}"
                 setBuildStatus("${env.GIT_URL}", "${env.GIT_COMMIT}", "${currentBuild.result}")
             }
